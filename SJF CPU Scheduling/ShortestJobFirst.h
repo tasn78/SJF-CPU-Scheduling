@@ -1,3 +1,6 @@
+// Tom Steinman
+// 10/5/2023
+
 #pragma once
 
 #ifndef SHORTESTJOBFIRST_H
@@ -8,7 +11,7 @@
 #include <stdexcept>
 #include <algorithm>
 
-// Process struct including ID, arrival time and burst time of each process
+// Process struct including ID, arrival time and burst time of each process (all integers)
 struct Process {
 	int process_id = 0;
 	int arrival_Time = 0;
@@ -26,9 +29,6 @@ bool compareArrivalTimes(const Process& a, const Process& b);
 
 //  Compares burst times between 2 processes
 bool compareBurstTimes(const Process& a, const Process& b);
-
-//  Calculates the waiting time per process and adds the waiting time to an array for later calculation
-void calculateWaitingTimePerProcess(std::list<Process>& processes);
 
 //  Uses arrival time comparison to sort by arrival time
 void sortByArrivalTimes(std::list<Process>& processes);
